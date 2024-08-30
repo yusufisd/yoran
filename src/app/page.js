@@ -1,113 +1,144 @@
+"use client";  
+import "../styles/style.css"
+
 import Image from "next/image";
+import Head from 'next/head';
+import React from 'react';
+
+
+import home from "../images/1.png";
+import about from "../images/2.png";
+import tokenomic from "../images/3.png";
+import howToBuy from "../images/4.png";
+import faq from "../images/5.png";
+import followUs from "../images/6.png";
+
+import bannerTitle from "../images/banner_title.png";
+import button from "../images/button.png";
+import welcomeTitle from "../images/welcome_title.png";
+import welcomeIcon from "../images/welcome_icon.png";
+
+import headerHome from "../images/h_home.png";
+import headerAbout from "../images/h_about.png";
+import headerFeatures from "../images/h_features.png";
+import headerFollow from "../images/h_follow.png";
+import headerFaq from "../images/h_faq.png";
+
+import contentAboutDesktop from "../images/content_about_desktop.png";
+import contentFeaturesDesktop from "../images/content_features_desktop.png";
+import contentHowDesktop from "../images/content_how_to_buy_desktop.png";
+import contentFaqDesktop from "../images/content_faq_desktop.png";
+
+
 
 export default function Home() {
+ 
+  
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
+    
+    <main className="bg-black flex flex-col">
+      <Head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+      </Head>
+
+      <div className="header flex flex-row m-auto gap-20 pt-10">
+        <a href="#home">
+          <p style={{ fontFamily:'PR-Columban demo' }}>HOME</p>
+        </a>
+        <a href="#about">
+          <p style={{ fontFamily:'PR-Columban demo' }}>ABOUT</p>
+        </a>
+        <a href="#tokenomic">
+          <p style={{ fontFamily:'PR-Columban demo' }}>TOKENOMICS</p>
+        </a>
+        <a href="#how_to_buy">
+          <p style={{ fontFamily:'PR-Columban demo' }}>HOW TO BUY</p>
+        </a>
+        <a href="#faq">
+          <p style={{ fontFamily:'PR-Columban demo' }}>FAQ</p>
+        </a>
+        <a href="#follow_us">
+          <p style={{ fontFamily:'PR-Columban demo' }}>FOLLOW US</p>
+        </a>
+      </div>
+
+
+      <div className="content gap-20 flex flex-col">
+
+        <div id="home" className="home relative flex items-center justify-center h-screen bg-cover bg-center" style={{ backgroundImage: `url(${home.src})` }}>
+          <div className="flex flex-col">
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
+              src={welcomeTitle}
+              className="self-center"
             />
-          </a>
+            <Image
+              src={bannerTitle}
+              className="self-center"
+            />
+            <p className="self-center" style={{ fontFamily: "PR-Columban demo", fontSize:25 }}>Lorem İpsum Lorem İpsum Lorem İpsum Lorem İpsum </p>
+            <Image
+              className="self-center cursor-pointer"
+              src={button}
+            />
+            <a 
+              href="#about"
+              className="self-center "
+
+            >
+              <Image
+                src={welcomeIcon}
+              />
+            </a>
+          </div>
         </div>
+
+
+        <div id="about" className="home relative flex items-center justify-center h-screen bg-cover bg-center" style={{ backgroundImage: `url(${about.src})`,  filter: 'opacity(0.8)'}}>
+          <div className="items-start -ml-[200] md:-ml-[300px] lg:-ml-[400px] xl:-ml-[890px] mt-[100px] w-[400px] lg:w-[480px] relative flex flex-col">
+            <h2 className="text-3xl lg:text-6xl" style={{ fontFamily:'PR-Columban demo',  }}>About</h2>
+            <h2 className=" text-6xl lg:text-9xl" style={{ fontFamily:'PR-Columban demo',}}>YORAN</h2>
+            <p>Lorem ipsgen spatie  ipsum Laravel ipsum Lorem ipsum yoranm Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumyoran Lorem ipsum Lorem ipsum Lorem general Lorem ipsum knife ipsum about  Lorem ipsum generate ipsum Lorem yoran Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipgeneratorem ipsum Lorem ipsum Lorem about Lorem ipsum Lorem ipsum Lorem ipsum Lorem how to ipsum Lorem ipsum Lorem ipsyoranLorem ipsum </p>
+          </div>
+        </div>
+
+
+        <div id="tokenomic" className="home relative flex items-center justify-center h-screen bg-cover bg-center" style={{ backgroundImage: `url(${tokenomic.src})` ,filter: 'opacity(0.8)'}}>
+          <Image
+              className="relative mt-[700px]"
+              src={contentFeaturesDesktop}
+              alt="Next.js Logo"
+            />
+        </div>
+        
+
+        <div id="how_to_buy" className="home relative flex items-center justify-center h-screen bg-cover bg-center" style={{ backgroundImage: `url(${howToBuy.src})` ,filter: 'opacity(0.8)'}}>
+          <Image
+              className="relative mt-[700px]"
+              src={contentHowDesktop}
+              alt="Next.js Logo"
+            />
+        </div>
+
+
+        <div id="faq" className="home relative flex items-center justify-center h-screen bg-cover bg-center" style={{ backgroundImage: `url(${faq.src})` ,filter: 'opacity(0.8)'}}>
+          <Image
+            className="relative mt-[400px] -ml-[1100px]"
+            src={contentFaqDesktop}
+            alt="Next.js Logo"
+          />
+        </div>
+
+
+        <div id="follow_us" className="home relative flex items-center justify-center h-screen bg-cover bg-center w-full" style={{ backgroundImage: `url(${followUs.src})`, filter: 'opacity(0.8)'}}>
+          
+        </div>
+       
+
+
       </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
     </main>
   );
 }
